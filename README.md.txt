@@ -1,1 +1,0 @@
-To jest mój projekt z przedmiotu Informatyka II. Szymon Dudziński
