@@ -7,7 +7,7 @@ int main() {
 
 	const int SZEROKOSC = 800;
 	const int WYSOKOSC = 600;
-	sf::RenderWindow window(sf::VideoMode(SZEROKOSC, WYSOKOSC), "gierka");
+	sf::RenderWindow window(sf::VideoMode(SZEROKOSC, WYSOKOSC), "gra");
 	window.setFramerateLimit(60);
 	sf::Clock deltaClock;
 
@@ -15,7 +15,7 @@ int main() {
 
 	//tworzenie obiektow gry
 	Paletka paletka({ SZEROKOSC / 2.f, WYSOKOSC / 2.f }, { 200.f, 20.f }, { 400.f, 0.f });
-	Pilka pilka({ SZEROKOSC / 2.f, WYSOKOSC - 30.f }, 20.f, { - 300.f, -300.f});
+	Pilka pilka({ SZEROKOSC / 2.f, WYSOKOSC - 30.f }, 20.f, { -300.f, -300.f });
 
 	std::vector<Cegla> cegly;
 	const int ILE_KOLUMN = 12;
@@ -34,7 +34,7 @@ int main() {
 				zycie = 1;
 			if (y >= 1)
 				zycie = 2;
-			cegly.emplace_back(sf::Vector2f(posX,posY), sf::Vector2f(ROZMIAR_BLOKU_X,ROZMIAR_BLOKU_Y),zycie);
+			cegly.emplace_back(sf::Vector2f(posX, posY), sf::Vector2f(ROZMIAR_BLOKU_X, ROZMIAR_BLOKU_Y), zycie);
 		}
 	}
 
@@ -50,7 +50,7 @@ int main() {
 		}
 		//aktualizacja logiki
 		paletka.ruch(dt, { SZEROKOSC,WYSOKOSC });
-		pilka.ruch(dt, { SZEROKOSC,WYSOKOSC },paletka);
+		pilka.ruch(dt, { SZEROKOSC,WYSOKOSC }, paletka);
 
 		//kolizja z ceglami
 		for (auto& blk : cegly) {
@@ -65,14 +65,14 @@ int main() {
 				cegly.erase(cegly.begin() + i);
 			}
 		}
-		window.clear(sf::Color(40,30,20));
+		window.clear(sf::Color(40, 30, 20));
 		pilka.draw(window);
 		paletka.draw(window);
 		//rysowanie cegiel
 		for (auto& blk : cegly) {
 			blk.draw(window);
 		};
-			
+
 		window.display();
 	}
 	return 0;
