@@ -2,18 +2,18 @@
 #include <array>
 
 class Cegla : public sf::RectangleShape {
-	private:
-		int punktyZycia;//0-3
-		bool jestZniszczony;//zniszczony = true
-		static const std::array<sf::Color, 4> colorLUT;
+private:
+	int punktyZycia;//0-3
+	bool jestZniszczony;//zniszczony = true
+	static const std::array<sf::Color, 4> colorLUT;
 
 
-	public:
-		Cegla(sf::Vector2f startPos, sf::Vector2f rozmiar, int L);
-		void aktualizujKolor();
-		void trafienie();
-		void draw(sf::RenderTarget& window);
-		bool czyZniszczony() const{ return jestZniszczony; };
+public:
+	Cegla(sf::Vector2f startPos, sf::Vector2f rozmiar, int L);
+	void aktualizujKolor();
+	void trafienie();
+	void draw(sf::RenderTarget& window);
+	bool czyZniszczony() const { return jestZniszczony; };
 };
 
 Cegla::Cegla(sf::Vector2f startPos, sf::Vector2f rozmiar, int L) {
@@ -27,10 +27,10 @@ Cegla::Cegla(sf::Vector2f startPos, sf::Vector2f rozmiar, int L) {
 };
 
 const std::array<sf::Color, 4> Cegla::colorLUT = {
-	sf::Color::Transparent,
-	sf::Color::Yellow,
+	sf::Color::Red,
 	sf::Color::Magenta,
-	sf::Color::Red
+	sf::Color::Yellow,
+	sf::Color::Transparent
 };
 
 void Cegla::trafienie() {
