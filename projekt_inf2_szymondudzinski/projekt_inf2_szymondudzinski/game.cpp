@@ -3,7 +3,7 @@
 
 Game::Game() :
 	window(sf::VideoMode(SZEROKOSC, WYSOKOSC), "gra"),
-	paletka({ SZEROKOSC / 2.f, WYSOKOSC / 2.f }, { 200.f, 20.f }, { 400.f, 0.f }),
+	paletka({ SZEROKOSC / 2.f, 10.f }, { 200.f, 20.f }, { 400.f, 0.f }),
 	pilka({ SZEROKOSC / 2.f, WYSOKOSC - 30.f }, 20.f, { -300.f, -300.f })
 
 {
@@ -16,6 +16,20 @@ void Game::run() {
 	while (window.isOpen())
 	{
 		sf::Time dt = deltaClock.restart();
+
+		for (int y = 0; y < ILE_WIERSZY; y++) {
+			for (int x = 0; x < ILE_KOLUMN; x++) {
+				float posX = x * (ROZMIAR_BLOKU_X + 2.f);
+				float posY = y * (ROZMIAR_BLOKU_Y + 2.f) + 60.f;
+				//ustalanie koloru wzgledem zycia
+				int zycie = 0;
+				if (y == 0)
+					zycie = 1;
+				if (y >= 1)
+					zycie = 2;
+				cegly.emplace_back(sf::Vector2f(posX, posY), sf::Vector2f(ROZMIAR_BLOKU_X, ROZMIAR_BLOKU_Y), zycie);
+			}
+		}
 
 		processEvents();
 		update(dt);
@@ -35,6 +49,8 @@ void Game::processEvents() {
 }
 
 void Game::update(sf::Time dt) {
+
+	//ruch paletki i pilki
 	paletka.ruch(dt, { SZEROKOSC,WYSOKOSC });
 	pilka.ruch(dt, { SZEROKOSC,WYSOKOSC }, paletka);
 
@@ -51,13 +67,6 @@ void Game::update(sf::Time dt) {
 			cegly.erase(cegly.begin() + i);
 		}
 	}
-	window.clear(sf::Color(40, 30, 20));
-	pilka.draw(window);
-	paletka.draw(window);
-	//rysowanie cegiel
-	for (auto& blk : cegly) {
-		blk.draw(window);
-	};
 }
 
 void Game::render() {
