@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\cegla.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\cegla.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\cegla.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\cegla.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\paletka.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\paletka.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\paletka.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\paletka.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\pilka.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\pilka.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\paletka.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\paletka.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\pilka.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\pilka.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\state.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\state.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3087C76-4ABE-4422-99C4-FFEF22A53ECE}|projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski.vcxproj|solutionrelative:projekt_inf2_szymondudzinski\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,43 +46,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "cegla.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\cegla.cpp",
+              "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\cegla.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\cegla.cpp",
+              "RelativeToolTip": "projekt_inf2_szymondudzinski\\cegla.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-29T17:33:27.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "paletka.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\paletka.cpp",
+              "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\paletka.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\paletka.cpp",
+              "RelativeToolTip": "projekt_inf2_szymondudzinski\\paletka.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-29T17:30:17.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "pilka.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\pilka.cpp",
+              "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\pilka.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\pilka.cpp",
+              "RelativeToolTip": "projekt_inf2_szymondudzinski\\pilka.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-29T17:29:22.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "state.h",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\state.h",
+              "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\state.h",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\state.h",
+              "RelativeToolTip": "projekt_inf2_szymondudzinski\\state.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-29T17:13:32.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "game.cpp",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\game.cpp",
+              "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\game.cpp",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\game.cpp",
+              "RelativeToolTip": "projekt_inf2_szymondudzinski\\game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-24T11:56:46.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "pilka.h",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\pilka.h",
               "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\pilka.h",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\pilka.h",
               "RelativeToolTip": "projekt_inf2_szymondudzinski\\pilka.h",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-10T07:15:42.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "cegla.h",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\cegla.h",
               "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\cegla.h",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\cegla.h",
               "RelativeToolTip": "projekt_inf2_szymondudzinski\\cegla.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-10T07:17:18.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\main.cpp",
               "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\main.cpp",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\main.cpp",
               "RelativeToolTip": "projekt_inf2_szymondudzinski\\main.cpp",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwCQAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-10T07:12:17.851Z",
               "EditorCaption": ""
@@ -75,7 +160,7 @@
               "RelativeDocumentMoniker": "projekt_inf2_szymondudzinski\\paletka.h",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Studia\\Semestr 3\\Informatyka II\\projekt_informatyka_2025_26\\projekt_inf2_szymondudzinski\\projekt_inf2_szymondudzinski\\paletka.h",
               "RelativeToolTip": "projekt_inf2_szymondudzinski\\paletka.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-10T07:09:44.085Z",
               "EditorCaption": ""
