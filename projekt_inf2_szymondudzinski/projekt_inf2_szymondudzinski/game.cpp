@@ -1,13 +1,13 @@
 #include "game.h"
+#include "pilka.h"
+#include "paletka.h"
 
 
 Game::Game() :
-	window(sf::VideoMode(SZEROKOSC, WYSOKOSC), "gra"),
 	paletka({ SZEROKOSC / 2.f, WYSOKOSC - 100.f }, { 200.f, 20.f }, { 400.f, 0.f }),
 	pilka({ SZEROKOSC / 2.f, WYSOKOSC - 200.f }, 20.f, { -300.f, -300.f })
 
 {
-	window.setFramerateLimit(60);
 	ROZMIAR_BLOKU_X = (SZEROKOSC - (ILE_KOLUMN - 1) * 2.f) / ILE_KOLUMN;
 	ROZMIAR_BLOKU_Y = 20.f;
 
@@ -26,27 +26,6 @@ Game::Game() :
 	}
 }
 
-void Game::run() {
-	while (window.isOpen())
-	{
-		sf::Time dt = deltaClock.restart();
-
-		processEvents();
-		update(dt);
-		render();
-
-		window.display();
-	}
-}
-
-void Game::processEvents() {
-	sf::Event event;
-	while (window.pollEvent(event))
-	{
-		if (event.type == sf::Event::Closed)
-			window.close();
-	}
-}
 
 void Game::update(sf::Time dt) {
 
@@ -69,12 +48,11 @@ void Game::update(sf::Time dt) {
 	}
 }
 
-void Game::render() {
-	window.clear(sf::Color(40, 30, 20));
-	pilka.draw(window);
-	paletka.draw(window);
+void Game::render(sf::RenderTarget& target) {
+	pilka.draw(target);
+	paletka.draw(target);
 	//rysowanie cegiel
 	for (auto& blk : cegly) {
-		blk.draw(window);
+		blk.draw(target);
 	};
 }

@@ -14,15 +14,12 @@ private:
 	float ROZMIAR_BLOKU_X;
 	float ROZMIAR_BLOKU_Y = 20.f;
 
-	sf::RenderWindow window;
 	Paletka paletka;
 	Pilka pilka;
 	sf::Clock deltaClock;
 
-	void processEvents();
-	void update(sf::Time dt);
-	void render();
 public:
 	Game();
-	void run();
+	void update(sf::Time dt);
+	void render(sf::RenderTarget& target);
 };
