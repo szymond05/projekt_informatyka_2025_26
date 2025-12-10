@@ -1,5 +1,4 @@
-﻿  cegla.cpp
-  main.cpp
+﻿  main.cpp
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(114,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(114,48): warning C4244:         with
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(114,48): warning C4244:         [
@@ -11,8 +10,8 @@ C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(114,28): warning C4244:             T=unsigned int
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(114,28): warning C4244:         ]
   Trwa generowanie kodu
-  1 of 275 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+  5 of 276 functions ( 1.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    4 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   projekt_inf2_szymondudzinski.vcxproj -> C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\x64\Release\projekt_inf2_szymondudzinski.exe

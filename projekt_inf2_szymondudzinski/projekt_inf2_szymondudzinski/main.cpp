@@ -28,7 +28,7 @@ public:
 
 Menu::Menu(float width, float height)
 {	//laduj czcionke
-	if (!font.loadFromFile("arial.ttf"))
+	if (!font.loadFromFile("Coolvetica.otf"))
 	{
 		return;
 	}
@@ -169,37 +169,40 @@ int main()
 				break;
 			}
 
-
-			//logika stanu
-			if (currentState == GameState::Playing) {
-				game.update(dt);
-			}
-			else if (currentState == GameState::Exiting) {
-				window.close();
-				return 0;
-			}
-
-			// rysowanie
-			window.clear(sf::Color(40, 30, 20));
-
-			switch (currentState)
-			{
-			case GameState::Menu:
-				menu.draw(window);
-				break;
-			case GameState::Playing:
-				game.render(window);
-				break;
-			case GameState::Scores:
-
-				window.draw(sf::Text("EKRAN WYNIKOW", menu.getFont(), 40));
-				break;
-			}
-
-			// Ostatnia czynnoœæ: wyœwietl okno wraz z zawartoœci¹
-			window.display();
+			
 		}
 
+		//logika stanu
+		if (currentState == GameState::Playing) {
+			game.update(dt);
+		}
+		else if (currentState == GameState::Exiting) {
+			window.close();
+			return 0;
+		}
+
+		// rysowanie
+		window.clear(sf::Color(40, 30, 20));
+
+		switch (currentState)
+		{
+		case GameState::Menu:
+			menu.draw(window);
+			break;
+		case GameState::Playing:
+			game.render(window);
+			break;
+		case GameState::Scores:
+
+			sf::Text scoreText("EKRAN WYNIKOW", menu.getFont(), 40);
+			scoreText.setStyle(sf::Text::Bold);
+			scoreText.setPosition(window.getSize().x / 2.f - scoreText.getGlobalBounds().width / 2.f,
+				window.getSize().y / 2.f - scoreText.getGlobalBounds().height / 2.f);
+			window.draw(scoreText);
+			break;
+		}
+		// Ostatnia czynnoœæ: wyœwietl okno wraz z zawartoœci¹
+		window.display();
 		
 	}
 	return 0;
