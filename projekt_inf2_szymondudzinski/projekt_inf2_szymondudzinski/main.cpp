@@ -186,7 +186,7 @@ int main()
 						::GameState saveState;
 						saveState.capture(game.getPaletka(), game.getPilka(), game.getCegly(), game.getBlockSize());
 						if (saveState.saveToFile("zapis.txt")) {
-							std::cout << "Gra zapisana!" << std::endl;
+							std::cout << "Gra zostala zapisana." << std::endl;
 						}
 					}
 				}

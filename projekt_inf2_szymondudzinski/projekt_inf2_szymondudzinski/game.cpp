@@ -16,11 +16,7 @@ Game::Game() :
 			float posX = x * (ROZMIAR_BLOKU_X + 2.f);
 			float posY = y * (ROZMIAR_BLOKU_Y + 2.f) + 60.f;
 			//ustalanie koloru wzgledem zycia
-			int zycie = 0;
-			if (y == 0)
-				zycie = 1;
-			if (y >= 1)
-				zycie = 2;
+			int zycie = 3;
 			cegly.emplace_back(sf::Vector2f(posX, posY), sf::Vector2f(ROZMIAR_BLOKU_X, ROZMIAR_BLOKU_Y), zycie);
 		}
 	}

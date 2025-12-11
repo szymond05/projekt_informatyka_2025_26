@@ -35,6 +35,9 @@ bool GameState::saveToFile(const std::string& filename) const {
     // Zapis liczby bloków
     file << blocks.size() << "\n";
 
+    // Zapis rozmiaru bloków
+    file << blockSize.x << " " << blockSize.y << "\n";
+
     // Zapis bloków
     for (const auto& block : blocks) {
         file << block.x << " " << block.y << " " << block.hp << "\n";
@@ -55,24 +58,23 @@ bool GameState::loadFromFile(const std::string& filename) {
     blocks.clear();
 
     // 1. Wczytaj Paletkê
-    if (file >> label >> paddlePosition.x >> paddlePosition.y) {
-        // Dane wczytane do zmiennych tymczasowych w GameState
-    }
+    file >> paddlePosition.x >> paddlePosition.y;
     
     // 2. Wczytaj Pi³kê
-    if (file >> label >> ballPosition.x >> ballPosition.y >> ballVelocity.x >> ballVelocity.y) {
-    }
+    file >> ballPosition.x >> ballPosition.y >> ballVelocity.x >> ballVelocity.y;
 
-    // 3. Wczytaj Bloki
+    // 3. Liczba bloków
     int blocksCount;
-    file >> label >> blocksCount;
+    file >> blocksCount;
 
-    blocks.clear(); // Czyœcimy stare dane
-    for (int i = 0; i < blocksCount; ++i) {
-        float x, y;
-        int hp;
-        file >> x >> y >> hp;
-        blocks.push_back({ x, y, hp });
+    // 4. Rozmiar bloków
+    file >> blockSize.x >> blockSize.y;
+
+    blocks.clear();
+    for (int i = 0; i < blocksCount; i++) {
+        BlockData b;
+        file >> b.x >> b.y >> b.hp;
+        blocks.push_back(b);
     }
 
     file.close();
@@ -84,7 +86,8 @@ void GameState::apply(Paletka& p, Pilka& b, std::vector<Cegla>& cegly) {
     b.reset(ballPosition, ballVelocity);
 
     cegly.clear();
-    for (const auto& data : blocks) {
-
+    for (const auto& block : blocks) {
+        Cegla nowaCegla(sf::Vector2f(block.x, block.y), blockSize, block.hp);
+        cegly.push_back(std::move(nowaCegla));
     }
 }

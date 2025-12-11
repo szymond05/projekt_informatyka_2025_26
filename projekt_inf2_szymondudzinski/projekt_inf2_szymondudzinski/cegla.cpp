@@ -11,23 +11,29 @@ Cegla::Cegla(sf::Vector2f startPos, sf::Vector2f rozmiar, int L) {
 };
 
 const std::array<sf::Color, 4> Cegla::colorLUT = {
-	sf::Color::Red,
-	sf::Color::Magenta,
-	sf::Color::Yellow,
-	sf::Color::Transparent
+	sf::Color::Transparent, // 0 dead
+	sf::Color::Red,         // 1
+	sf::Color::Magenta,     // 2
+	sf::Color::Yellow       // 3
 };
 
+
 void Cegla::trafienie() {
-	if (jestZniszczony == true)
-		return;
+	if (jestZniszczony) return;
+
 	punktyZycia--;
-	aktualizujKolor();
-	if (punktyZycia <= 0)
+
+	if (punktyZycia <= 0) {
 		jestZniszczony = true;
+		return;
+	}
+
+	aktualizujKolor();
 }
 
 void Cegla::aktualizujKolor() {
-	this->setFillColor(colorLUT[punktyZycia]);
+	int hp = std::max(0, punktyZycia);
+	this->setFillColor(colorLUT[hp]);
 }
 
 void Cegla::draw(sf::RenderTarget& window) {
