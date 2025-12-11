@@ -12,13 +12,14 @@ public:
 	void draw(sf::RenderTarget& window);
 	void ruch(sf::Time dt, sf::Vector2f windowWH, Paletka& pdl);
 	sf::FloatRect getGlobalBounds() { return m_shape.getGlobalBounds(); }
+
 	float x;
 	float y;
 	float velX;
 	float velY;
-	float getX() { return x; }
-	float getY() { return y; }
-	float getVelX() { return velX; }
-	float getVelY() { return velY; }
+
+	sf::Vector2f getPosition() const { return m_shape.getPosition(); }
+	sf::Vector2f getVelocity() const { return velocity; }
+	void reset(sf::Vector2f pos, sf::Vector2f vel);
 };
 

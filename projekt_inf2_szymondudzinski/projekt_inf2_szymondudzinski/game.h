@@ -22,4 +22,8 @@ public:
 	Game();
 	void update(sf::Time dt);
 	void render(sf::RenderTarget& target);
+	Paletka& getPaletka() { return paletka; }
+	Pilka& getPilka() { return pilka; }
+	std::vector<Cegla>& getCegly() { return cegly; }
+	sf::Vector2f getBlockSize() const { return { ROZMIAR_BLOKU_X, ROZMIAR_BLOKU_Y }; }
 };

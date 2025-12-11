@@ -128,6 +128,7 @@
   <ItemGroup>
     <ClCompile Include="cegla.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="gamestate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="paletka.cpp" />
     <ClCompile Include="pilka.cpp" />
@@ -135,9 +136,9 @@
   <ItemGroup>
     <ClInclude Include="cegla.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="gamestate.h" />
     <ClInclude Include="paletka.h" />
     <ClInclude Include="pilka.h" />
-    <ClInclude Include="state.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

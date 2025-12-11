@@ -40,3 +40,10 @@ void Pilka::ruch(sf::Time dt, sf::Vector2f windowWH, Paletka& pdl) {
 void Pilka::odbijY() {
 	velocity.y = -velocity.y;
 }
+
+void Pilka::reset(sf::Vector2f pos, sf::Vector2f vel) {
+	m_shape.setPosition(pos);
+	velocity = vel;
+	velX = velocity.x;
+	velY = velocity.y;
+}

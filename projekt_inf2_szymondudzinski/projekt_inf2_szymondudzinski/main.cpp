@@ -1,10 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include "game.h"
+#include <gamestate.h>
 #include <iostream>
 
-#define MAX_LICZBA_POZIOMOW 3
+#define MAX_LICZBA_POZIOMOW 4
 
-enum class GameState { Menu, Playing, Scores, Exiting };
+enum class AppState { Menu, Playing, Scores, Exiting };
 
 class Menu
 {
@@ -37,14 +38,21 @@ Menu::Menu(float width, float height)
 	menu[0].setFillColor(sf::Color::Cyan);
 	menu[0].setString("Nowa gra");
 	menu[0].setPosition(sf::Vector2f(width / 3, height / (MAX_LICZBA_POZIOMOW + 1) * 1));
+
 	menu[1].setFont(font);
 	menu[1].setFillColor(sf::Color::White);
-	menu[1].setString("Ostatnie wyniki");
+	menu[1].setString("Wczytaj grê");
 	menu[1].setPosition(sf::Vector2f(width / 3, height / (MAX_LICZBA_POZIOMOW + 1) * 2));
+
 	menu[2].setFont(font);
 	menu[2].setFillColor(sf::Color::White);
-	menu[2].setString("Wyjscie");
+	menu[2].setString("Ostatnie wyniki");
 	menu[2].setPosition(sf::Vector2f(width / 3, height / (MAX_LICZBA_POZIOMOW + 1) * 3));
+
+	menu[3].setFont(font);
+	menu[3].setFillColor(sf::Color::White);
+	menu[3].setString("Wyjscie");
+	menu[3].setPosition(sf::Vector2f(width / 3, height / (MAX_LICZBA_POZIOMOW + 1) * 4));
 }
 
 //rysowanie menu w biezacym oknie
@@ -116,7 +124,7 @@ int main()
 
 	sf::Clock deltaClock;
 
-	GameState currentState = GameState::Menu;
+	AppState currentState = AppState::Menu;
 
 	int menu_selected_flag = 0;
 
@@ -134,38 +142,56 @@ int main()
 				window.close();
 
 			switch (currentState) {
-			case GameState::Menu:
+			case AppState::Menu:
 				if (event.type == sf::Event::KeyPressed) {
 					if (event.key.code == sf::Keyboard::Up)
 					{
-						myDelay(250);
 						menu.przesunG();
 					}
 					else if (event.key.code == sf::Keyboard::Down)
 					{
-						myDelay(250);
 						menu.przesunD();
 					}
 					else if (event.key.code == sf::Keyboard::Enter)
 					{
 						int selected = menu.getSelectedItem();
 						if (selected == 0) { //nowa gra
-							currentState = GameState::Playing;
+							currentState = AppState::Playing;
 							std::cout << "Uruchamiam gre..." << std::endl;
 						}
 						else if (selected == 1) {
-							currentState = GameState::Scores;
-							std::cout << "Najlepsze wyniki..." << std::endl;
+							::GameState saveState;
+							if (saveState.loadFromFile("zapis.txt")) {
+								saveState.apply(game.getPaletka(), game.getPilka(), game.getCegly());
+								currentState = AppState::Playing;
+								std::cout << "Wczytano gre." << std::endl;
+							}
+							else {
+								std::cerr << "Blad: Nie znaleziono pliku zapisu (zapis.txt)." << std::endl;
+							}
 						}
 						else if (selected == 2) {
-							currentState = GameState::Exiting;
+							currentState = AppState::Scores;
+							std::cout << "Najlepsze wyniki..." << std::endl;
+						}
+						else if (selected == 3) {
+							currentState = AppState::Exiting;
 						}
 					}
 				}
 				break;
-			case GameState::Playing:
+			case AppState::Playing:
+				if (event.type == sf::Event::KeyPressed) {
+					if (event.key.code == sf::Keyboard::F5) { // Zapis (F5)
+						::GameState saveState;
+						saveState.capture(game.getPaletka(), game.getPilka(), game.getCegly(), game.getBlockSize());
+						if (saveState.saveToFile("zapis.txt")) {
+							std::cout << "Gra zapisana!" << std::endl;
+						}
+					}
+				}
 				break;
-			case GameState::Scores:
+			case AppState::Scores:
 				break;
 			}
 
@@ -173,10 +199,10 @@ int main()
 		}
 
 		//logika stanu
-		if (currentState == GameState::Playing) {
+		if (currentState == AppState::Playing) {
 			game.update(dt);
 		}
-		else if (currentState == GameState::Exiting) {
+		else if (currentState == AppState::Exiting) {
 			window.close();
 			return 0;
 		}
@@ -186,13 +212,13 @@ int main()
 
 		switch (currentState)
 		{
-		case GameState::Menu:
+		case AppState::Menu:
 			menu.draw(window);
 			break;
-		case GameState::Playing:
+		case AppState::Playing:
 			game.render(window);
 			break;
-		case GameState::Scores:
+		case AppState::Scores:
 
 			sf::Text scoreText("EKRAN WYNIKOW", menu.getFont(), 40);
 			scoreText.setStyle(sf::Text::Bold);

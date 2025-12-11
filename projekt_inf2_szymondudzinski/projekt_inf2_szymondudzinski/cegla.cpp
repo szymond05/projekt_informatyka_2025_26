@@ -34,6 +34,6 @@ void Cegla::draw(sf::RenderTarget& window) {
 	window.draw(*this);
 }
 
-int Cegla::getHP() {
+int Cegla::getHP() const {
 	return punktyZycia;
 }

@@ -1,3 +1,4 @@
+#pragma once
 #include <SFML/Graphics.hpp>
 #include <array>
 
@@ -14,6 +15,8 @@ public:
 	void trafienie();
 	void draw(sf::RenderTarget& window);
 	bool czyZniszczony() const { return jestZniszczony; };
-	int getHP();
+	int getHP() const;
+	sf::Vector2f getPosition() const { return sf::RectangleShape::getPosition(); }
+
 };
 

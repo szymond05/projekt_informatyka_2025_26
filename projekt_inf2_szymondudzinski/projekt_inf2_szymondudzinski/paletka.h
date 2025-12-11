@@ -12,7 +12,7 @@ public:
 	void draw(sf::RenderTarget& window);
 	void ruch(sf::Time dt, sf::Vector2f windowWidth);
 	sf::FloatRect getGlobalBounds() { return m_shape.getGlobalBounds(); }
-	float getX() { return x; }
-	float getY() { return y; }
+	sf::Vector2f getPosition() const { return m_shape.getPosition(); }
+	void setPosition(sf::Vector2f pos) { m_shape.setPosition(pos); }
 };
 
