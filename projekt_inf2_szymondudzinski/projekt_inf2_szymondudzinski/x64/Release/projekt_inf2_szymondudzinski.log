@@ -1,5 +1,5 @@
 ﻿  game.cpp
-C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\game.cpp(41,13): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\game.cpp(34,13): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
   main.cpp
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(122,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(122,48): warning C4244:         with
@@ -11,13 +11,13 @@ C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(122,28): warning C4244:         [
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(122,28): warning C4244:             T=unsigned int
 C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(122,28): warning C4244:         ]
-C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(292,24): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
-C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(292,24): warning C4244:         with
-C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(292,24): warning C4244:         [
-C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(292,24): warning C4244:             T=unsigned int
-C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(292,24): warning C4244:         ]
+C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(293,24): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(293,24): warning C4244:         with
+C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(293,24): warning C4244:         [
+C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(293,24): warning C4244:             T=unsigned int
+C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\projekt_inf2_szymondudzinski\main.cpp(293,24): warning C4244:         ]
   Trwa generowanie kodu
   Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 481 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 483 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Zakończono generowanie kodu
   projekt_inf2_szymondudzinski.vcxproj -> C:\Users\admin\Desktop\Studia\Semestr 3\Informatyka II\projekt_informatyka_2025_26\projekt_inf2_szymondudzinski\x64\Release\projekt_inf2_szymondudzinski.exe

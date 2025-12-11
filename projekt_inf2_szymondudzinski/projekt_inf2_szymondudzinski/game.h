@@ -14,6 +14,8 @@ private:
 	float ROZMIAR_BLOKU_X;
 	float ROZMIAR_BLOKU_Y = 20.f;
 
+	void initLevel();
+
 	int score = 0;
 
 	Paletka paletka;
@@ -24,6 +26,8 @@ public:
 	Game();
 	void update(sf::Time dt);
 	void render(sf::RenderTarget& target);
+	void reset();
+
 	int getScore() const { return score; }
 	void resetScore() { score = 0; }
 	Paletka& getPaletka() { return paletka; }

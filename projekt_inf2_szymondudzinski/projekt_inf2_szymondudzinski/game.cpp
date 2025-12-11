@@ -10,16 +10,9 @@ Game::Game() :
 {
 	ROZMIAR_BLOKU_X = (SZEROKOSC - (ILE_KOLUMN - 1) * 2.f) / ILE_KOLUMN;
 	ROZMIAR_BLOKU_Y = 20.f;
+	initLevel();
 
-	for (int y = 0; y < ILE_WIERSZY; y++) {
-		for (int x = 0; x < ILE_KOLUMN; x++) {
-			float posX = x * (ROZMIAR_BLOKU_X + 2.f);
-			float posY = y * (ROZMIAR_BLOKU_Y + 2.f) + 60.f;
-			//ustalanie koloru wzgledem zycia
-			int zycie = 3;
-			cegly.emplace_back(sf::Vector2f(posX, posY), sf::Vector2f(ROZMIAR_BLOKU_X, ROZMIAR_BLOKU_Y), zycie);
-		}
-	}
+	
 }
 
 
@@ -52,4 +45,26 @@ void Game::render(sf::RenderTarget& target) {
 	for (auto& blk : cegly) {
 		blk.draw(target);
 	};
+}
+
+void Game::initLevel() {
+	cegly.clear();
+
+	paletka.setPosition({ SZEROKOSC / 2.f, WYSOKOSC - 100.f });
+	pilka.reset({ SZEROKOSC / 2.f, WYSOKOSC - 200.f }, { -300.f, -300.f });
+
+	resetScore();
+
+	for (int y = 0; y < ILE_WIERSZY; y++) {
+		for (int x = 0; x < ILE_KOLUMN; x++) {
+			float posX = x * (ROZMIAR_BLOKU_X + 2.f);
+			float posY = y * (ROZMIAR_BLOKU_Y + 2.f) + 60.f;
+			//ustalanie koloru wzgledem zycia
+			int zycie = 3;
+			cegly.emplace_back(sf::Vector2f(posX, posY), sf::Vector2f(ROZMIAR_BLOKU_X, ROZMIAR_BLOKU_Y), zycie);
+		}
+	}
+}
+void Game::reset() {
+	initLevel();
 }

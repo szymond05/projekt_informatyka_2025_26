@@ -157,6 +157,7 @@ int main()
 					{
 						int selected = menu.getSelectedItem();
 						if (selected == 0) { //nowa gra
+							game.reset();
 							game.resetScore();
 							currentState = AppState::Playing;
 							std::cout << "Uruchamiam gre..." << std::endl;
