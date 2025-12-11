@@ -5,7 +5,7 @@
 
 #define MAX_LICZBA_POZIOMOW 4
 
-enum class AppState { Menu, Playing, Scores, Exiting };
+enum class AppState { Menu, Playing, Scores, GameOver, Victory, Exiting };
 
 class Menu
 {
@@ -41,7 +41,7 @@ Menu::Menu(float width, float height)
 
 	menu[1].setFont(font);
 	menu[1].setFillColor(sf::Color::White);
-	menu[1].setString("Wczytaj grê");
+	menu[1].setString("Wczytaj gre");
 	menu[1].setPosition(sf::Vector2f(width / 3, height / (MAX_LICZBA_POZIOMOW + 1) * 2));
 
 	menu[2].setFont(font);
@@ -127,6 +127,7 @@ int main()
 	AppState currentState = AppState::Menu;
 
 	int menu_selected_flag = 0;
+	int lastScore = 0;
 
 	// petla wieczna - dopoki okno jest otwarte
 	while (window.isOpen())
@@ -156,6 +157,7 @@ int main()
 					{
 						int selected = menu.getSelectedItem();
 						if (selected == 0) { //nowa gra
+							game.resetScore();
 							currentState = AppState::Playing;
 							std::cout << "Uruchamiam gre..." << std::endl;
 						}
@@ -182,7 +184,7 @@ int main()
 				break;
 			case AppState::Playing:
 				if (event.type == sf::Event::KeyPressed) {
-					if (event.key.code == sf::Keyboard::F5) { // Zapis (F5)
+					if (event.key.code == sf::Keyboard::F5) { // wcisniecie f5 powoduje zapis
 						::GameState saveState;
 						saveState.capture(game.getPaletka(), game.getPilka(), game.getCegly(), game.getBlockSize());
 						if (saveState.saveToFile("zapis.txt")) {
@@ -192,7 +194,30 @@ int main()
 				}
 				break;
 			case AppState::Scores:
+				//powrot do menu przy wcisnieciu enter
+				if (event.type == sf::Event::KeyPressed &&
+					event.key.code == sf::Keyboard::Enter)
+				{
+					currentState = AppState::Menu;
+				}
 				break;
+			case AppState::GameOver:
+				//powrot do menu przy wcisnieciu enter
+				if (event.type == sf::Event::KeyPressed &&
+					event.key.code == sf::Keyboard::Enter)
+				{
+					currentState = AppState::Menu;
+				}
+				break;
+			case AppState::Victory:
+			{
+				if (event.type == sf::Event::KeyPressed &&
+					event.key.code == sf::Keyboard::Enter)
+				{
+					currentState = AppState::Menu;
+				}
+				break;
+			}
 			}
 
 			
@@ -201,6 +226,25 @@ int main()
 		//logika stanu
 		if (currentState == AppState::Playing) {
 			game.update(dt);
+
+
+			// czy pi³ka spad³a? jesli tak to przegrana
+			if (game.getPilka().getPosition().y > 600) {
+				lastScore = game.getScore();
+				currentState = AppState::GameOver;
+			}
+		}
+
+		bool wszystkieZniszczone = true;
+		for (auto& c : game.getCegly()) {
+			if (!c.czyZniszczony()) {
+				wszystkieZniszczone = false;
+				break;
+			}
+		}
+		if (wszystkieZniszczone) {
+			lastScore = game.getScore();
+			currentState = AppState::Victory;
 		}
 		else if (currentState == AppState::Exiting) {
 			window.close();
@@ -216,17 +260,84 @@ int main()
 			menu.draw(window);
 			break;
 		case AppState::Playing:
+		{
 			game.render(window);
-			break;
-		case AppState::Scores:
 
-			sf::Text scoreText("EKRAN WYNIKOW", menu.getFont(), 40);
-			scoreText.setStyle(sf::Text::Bold);
-			scoreText.setPosition(window.getSize().x / 2.f - scoreText.getGlobalBounds().width / 2.f,
-				window.getSize().y / 2.f - scoreText.getGlobalBounds().height / 2.f);
-			window.draw(scoreText);
+			// wyswietlanie punktów
+			{
+				sf::Text wynikText("Punkty: " + std::to_string(game.getScore()), menu.getFont(), 24);
+				wynikText.setFillColor(sf::Color::White);
+				wynikText.setPosition(650, 10); // górny prawy róg
+				window.draw(wynikText);
+			}
+
 			break;
 		}
+		case AppState::Scores:
+		{
+			sf::Text scoreText("Ostatni wynik: " + std::to_string(lastScore),
+				menu.getFont(), 40);
+			scoreText.setStyle(sf::Text::Bold);
+			scoreText.setPosition(
+				window.getSize().x / 2.f - scoreText.getGlobalBounds().width / 2.f,
+				20
+			);
+			window.draw(scoreText);
+
+			sf::Text scoreInfo("Nacisnij ENTER aby wrocic do menu",
+				menu.getFont(), 30);
+			scoreInfo.setFillColor(sf::Color::White);
+			scoreInfo.setPosition(
+				window.getSize().x / 2.f - scoreInfo.getGlobalBounds().width / 2.f,
+				window.getSize().y - 50
+			);
+			window.draw(scoreInfo);
+
+			break;
+		}
+		case AppState::GameOver:
+		{
+			sf::Text loseText("PRZEGRALES", menu.getFont(), 60);
+			loseText.setStyle(sf::Text::Bold);
+			loseText.setFillColor(sf::Color::Red);
+			loseText.setPosition(
+				window.getSize().x / 2.f - loseText.getGlobalBounds().width / 2.f,
+				window.getSize().y / 2.f - 100
+			);
+			window.draw(loseText);
+
+			sf::Text info("Nacisnij ENTER aby wrocic do menu",
+				menu.getFont(), 30);
+			info.setFillColor(sf::Color::White);
+			info.setPosition(
+				window.getSize().x / 2.f - info.getGlobalBounds().width / 2.f,
+				window.getSize().y / 2.f + 10
+			);
+			window.draw(info);
+		}
+			break;
+		case AppState::Victory:
+		{
+			sf::Text winText("KONIEC GRY: WYGRALES", menu.getFont(), 60);
+			winText.setStyle(sf::Text::Bold);
+			winText.setFillColor(sf::Color::Green);
+			winText.setPosition(
+				window.getSize().x / 2.f - winText.getGlobalBounds().width / 2.f,
+				window.getSize().y / 2.f - 100
+			);
+			window.draw(winText);
+
+			sf::Text info("Nacisnij ENTER aby wrocic do menu",
+				menu.getFont(), 30);
+			info.setFillColor(sf::Color::White);
+			info.setPosition(
+				window.getSize().x / 2.f - info.getGlobalBounds().width / 2.f,
+				window.getSize().y / 2.f + 10
+			);
+			window.draw(info);
+		}
+		}
+
 		// Ostatnia czynnoœæ: wyœwietl okno wraz z zawartoœci¹
 		window.display();
 		

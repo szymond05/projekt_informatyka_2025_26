@@ -33,6 +33,7 @@ void Game::update(sf::Time dt) {
 	for (auto& blk : cegly) {
 		if (!blk.czyZniszczony() && pilka.getGlobalBounds().intersects(blk.getGlobalBounds())) {
 			blk.trafienie();
+			score++;
 			pilka.odbijY();
 		}
 	}

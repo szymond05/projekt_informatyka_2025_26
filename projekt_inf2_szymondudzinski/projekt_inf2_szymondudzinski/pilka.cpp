@@ -29,7 +29,10 @@ void Pilka::ruch(sf::Time dt, sf::Vector2f windowWH, Paletka& pdl) {
 		velocity.y = -velocity.y;
 	}
 	if (yp + rp >= windowWH.y) {
-		velocity.y = -velocity.y;
+		// pi³ka spad³a
+		velocity.y = 0;
+		velocity.x = 0;
+		m_shape.setPosition(700, 700); // znika z ekranu
 	}
 
 	//odbicie od paletki

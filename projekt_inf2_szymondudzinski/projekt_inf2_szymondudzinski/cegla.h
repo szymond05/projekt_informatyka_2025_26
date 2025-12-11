@@ -7,6 +7,7 @@ private:
 	int punktyZycia;//0-3
 	bool jestZniszczony;//zniszczony = true
 	static const std::array<sf::Color, 4> colorLUT;
+	
 
 
 public:

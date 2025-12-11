@@ -14,6 +14,8 @@ private:
 	float ROZMIAR_BLOKU_X;
 	float ROZMIAR_BLOKU_Y = 20.f;
 
+	int score = 0;
+
 	Paletka paletka;
 	Pilka pilka;
 	sf::Clock deltaClock;
@@ -22,8 +24,12 @@ public:
 	Game();
 	void update(sf::Time dt);
 	void render(sf::RenderTarget& target);
+	int getScore() const { return score; }
+	void resetScore() { score = 0; }
 	Paletka& getPaletka() { return paletka; }
 	Pilka& getPilka() { return pilka; }
 	std::vector<Cegla>& getCegly() { return cegly; }
 	sf::Vector2f getBlockSize() const { return { ROZMIAR_BLOKU_X, ROZMIAR_BLOKU_Y }; }
+
+	
 };
